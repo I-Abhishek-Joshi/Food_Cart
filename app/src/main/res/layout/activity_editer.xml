@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".editerActivity"
+    android:background="@color/lightYellow">
+
+    <ImageView
+        android:id="@+id/eImage"
+        android:layout_width="398dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/eItemName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic__311166146" />
+
+    <TextView
+        android:id="@+id/eItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="FOOD_ITEM_NAME"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/eBtnDesc"
+        app:layout_constraintEnd_toEndOf="@+id/eImage"
+        app:layout_constraintStart_toStartOf="@+id/eImage"
+        app:layout_constraintTop_toBottomOf="@+id/eImage" />
+
+    <TextView
+        android:id="@+id/eQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="1dp"
+        android:text="1"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/eDescription"
+        app:layout_constraintEnd_toStartOf="@+id/eBtnInc"
+        app:layout_constraintStart_toEndOf="@+id/eBtnDesc"
+        app:layout_constraintTop_toBottomOf="@+id/eItemName" />
+
+    <Button
+        android:id="@+id/eBtnDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:text="-"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/eQuantity"
+        app:layout_constraintEnd_toStartOf="@+id/eQuantity"
+        app:layout_constraintStart_toStartOf="@+id/eItemName"
+        app:layout_constraintTop_toTopOf="@+id/eQuantity" />
+
+    <Button
+        android:id="@+id/eBtnInc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="+"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/eQuantity"
+        app:layout_constraintEnd_toEndOf="@+id/eItemName"
+        app:layout_constraintStart_toEndOf="@+id/eQuantity"
+        app:layout_constraintTop_toTopOf="@+id/eQuantity"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/eDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="44dp"
+        android:text="1 Double topping pizza + Garlic Bread Stick + Dip + 250ml Cold drink"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/eName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eQuantity" />
+
+    <Button
+        android:id="@+id/eBtnOrder"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="56dp"
+        android:text="Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/eBtnCart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ePhone" />
+
+    <Button
+        android:id="@+id/eBtnCart"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Add to cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/eBtnOrder"
+        app:layout_constraintTop_toTopOf="@+id/eBtnOrder"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/eName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        android:textColor="@android:color/black"
+        android:textColorHint="#ff80cbc4"
+        app:layout_constraintBottom_toTopOf="@+id/ePhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eDescription" />
+
+    <EditText
+        android:id="@+id/ePhone"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Phone No."
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textColorHint="#ff80cbc4"
+        app:layout_constraintBottom_toTopOf="@+id/eBtnOrder"
+        app:layout_constraintEnd_toEndOf="@id/eName"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/eName"
+        app:layout_constraintTop_toBottomOf="@id/eName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

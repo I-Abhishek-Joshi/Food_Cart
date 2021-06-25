@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".itemUpdate"
+    android:background="@color/lightYellow">
+
+    <ImageView
+        android:id="@+id/Uimage"
+        android:layout_width="398dp"
+        android:layout_height="171dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/Uitem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic__311166146" />
+
+    <TextView
+        android:id="@+id/Uitem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="FOOD_ITEM_NAME"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/uBtnDec"
+        app:layout_constraintEnd_toEndOf="@+id/Uimage"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/Uimage"
+        app:layout_constraintTop_toBottomOf="@+id/Uimage" />
+
+    <TextView
+        android:id="@+id/Uquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="120dp"
+        android:text="1"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnUpdate"
+        app:layout_constraintEnd_toStartOf="@+id/uBtnInc"
+        app:layout_constraintStart_toEndOf="@+id/uBtnDec"
+        app:layout_constraintTop_toBottomOf="@+id/Uitem" />
+
+    <Button
+        android:id="@+id/uBtnDec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/Uquantity"
+        app:layout_constraintEnd_toStartOf="@+id/Uquantity"
+        app:layout_constraintStart_toStartOf="@+id/Uitem"
+        app:layout_constraintTop_toTopOf="@+id/Uquantity"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/uBtnInc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/Uquantity"
+        app:layout_constraintEnd_toEndOf="@+id/Uitem"
+        app:layout_constraintStart_toEndOf="@+id/Uquantity"
+        app:layout_constraintTop_toTopOf="@+id/Uquantity"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="400dp"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/uBtnDelete"
+        app:layout_constraintStart_toStartOf="@+id/uBtnDec"
+        app:layout_constraintTop_toBottomOf="@id/Uquantity" />
+
+    <Button
+        android:id="@+id/uBtnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="@+id/btnUpdate"
+        app:layout_constraintEnd_toEndOf="@+id/uBtnInc"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnUpdate"
+        app:layout_constraintTop_toTopOf="@+id/btnUpdate"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
